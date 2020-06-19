@@ -7,7 +7,6 @@ import Home from './views/home/containers/home';
 import Admin from './views/admin/containers/admin';
 
 import './App.scss';
-import './App.css';
 
 function App() {
     return (
