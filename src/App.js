@@ -1,26 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
+import history from './history';
 
+import Navbar from './views/navbar/components/navbar';
 import Home from './views/home/containers/home';
 import Admin from './views/admin/containers/admin';
 
+import './App.scss';
+import './App.css';
+
 function App() {
     return (
-        <Router>
+        <Router history={history}>
             <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/admin">Admin</Link>
-                        </li>
-                    </ul>
-                </nav>
-
-                {/* A <Switch> looks through its children <Route>s and
-                renders the first one that matches the current URL. */}
+                <Navbar location={history.location} />
                 <Switch>
                     <Route path="/admin">
                         <Admin />
