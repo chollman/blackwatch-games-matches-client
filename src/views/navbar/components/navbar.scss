@@ -1,4 +1,10 @@
-.Menu {
-    background: red;
-    padding: 0;
+@import '../../../App-variables.scss';
+
+.#{$css-namespace} {
+    .nav-menu {
+        padding: 0;
+    }
+    .Menu {
+        background: lightslategray;
+    }
 }

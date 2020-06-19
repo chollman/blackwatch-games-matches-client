@@ -11,7 +11,7 @@ import './App.scss';
 function App() {
     return (
         <Router history={history}>
-            <div>
+            <div className="bgm">
                 <Navbar location={history.location} />
                 <Switch>
                     <Route path="/admin">
