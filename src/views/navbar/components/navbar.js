@@ -16,7 +16,7 @@ const Navbar = ({ pushed, location }) => {
             basic
         >
             <Container>
-                <Menu className="bg-menu" pointing secondary>
+                <Menu className="content-box bg-menu" pointing secondary>
                     <Menu.Item
                         as={Link}
                         to="/"

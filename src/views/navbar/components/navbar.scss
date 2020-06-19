@@ -9,10 +9,11 @@
         }
     }
     .bg-menu.secondary.pointing {
-        background: rgba(255, 255, 255, 0.05);
         min-height: $menu-height;
-        @include border-radius(8px);
+        @include border-radius($section-border-radius);
         padding: 0 20px;
+        @include content-box();
+        margin-bottom: 2em;
 
         a.item {
             color: $link-color;

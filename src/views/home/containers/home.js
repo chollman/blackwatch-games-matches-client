@@ -5,7 +5,7 @@ import src from './img/test-image.png';
 const Home = () => {
     return (
         <Container>
-            <Segment textAlign="center" vertical>
+            <Segment className="content-box" textAlign="center">
                 <Header icon>
                     <Icon name="pdf file outline" />
                     Home

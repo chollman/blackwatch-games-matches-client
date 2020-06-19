@@ -2,7 +2,12 @@
 
 $css-namespace: bgm;
 
+$text-color: #a5aab5;
+$bg-section: #212b37;
+
+$section-border-radius: 8px;
+
 $menu-height: 5em;
-$link-color: #777777;
-$link-color-active: #cccccc;
+$link-color: $text-color;
+$link-color-active: #ffffff;
 $link-border-color: #02affe;
