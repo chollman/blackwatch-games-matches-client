@@ -6,13 +6,13 @@ import Navbar from './views/navbar/components/navbar';
 import Home from './views/home/containers/home';
 import Admin from './views/admin/containers/admin';
 
-import './App.scss';
+import './styles/global.scss';
 
 function App() {
     return (
         <Router history={history}>
             <div className="bgm">
-                <Navbar location={history.location} />
+                <Navbar pushed location={history.location} />
                 <Switch>
                     <Route path="/admin">
                         <Admin />

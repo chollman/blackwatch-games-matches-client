@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Container, Menu, Segment } from 'semantic-ui-react';
+import { Container, Menu, Segment } from 'semantic-ui-react';
 
 import './navbar.scss';
 
-const Navbar = ({ location }) => {
+const Navbar = ({ pushed, location }) => {
     const [activeItem, setActiveItem] = useState(location.pathname);
 
     const handleItemClick = (e, { to }) => setActiveItem(to);
 
     return (
-        <Segment className="nav-menu" textAlign="center" vertical>
-            <Menu className="Menu" size="large">
-                <Container>
+        <Segment
+            className={`nav-menu ${pushed ? 'pushed' : ''}`}
+            textAlign="center"
+            basic
+        >
+            <Container>
+                <Menu className="bg-menu" pointing secondary>
                     <Menu.Item
                         as={Link}
                         to="/"
@@ -29,21 +33,8 @@ const Navbar = ({ location }) => {
                     >
                         Admin
                     </Menu.Item>
-                    <Menu.Item position="right">
-                        <Button as="a" inverted>
-                            Log in
-                        </Button>
-                        <Button
-                            as="a"
-                            inverted
-                            primary
-                            style={{ marginLeft: '0.5em' }}
-                        >
-                            Sign Up
-                        </Button>
-                    </Menu.Item>
-                </Container>
-            </Menu>
+                </Menu>
+            </Container>
         </Segment>
     );
 };
