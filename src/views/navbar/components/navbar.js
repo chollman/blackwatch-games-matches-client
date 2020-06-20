@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Container, Menu, Segment } from 'semantic-ui-react';
 
@@ -37,6 +38,11 @@ const Navbar = ({ pushed, location }) => {
             </Container>
         </Segment>
     );
+};
+
+Navbar.propTypes = {
+    pushed: PropTypes.bool,
+    location: PropTypes.object.isRequired,
 };
 
 export default Navbar;

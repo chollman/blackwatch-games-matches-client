@@ -5,7 +5,7 @@
         padding: 0;
 
         &.pushed {
-            margin-top: 2em;
+            margin: 2em 0;
         }
     }
     .bg-menu.secondary.pointing {
@@ -13,7 +13,6 @@
         @include border-radius($section-border-radius);
         padding: 0 20px;
         @include content-box();
-        margin-bottom: 2em;
 
         a.item {
             color: $link-color;
