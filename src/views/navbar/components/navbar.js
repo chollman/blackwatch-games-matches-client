@@ -1,48 +1,17 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { Container, Menu, Segment } from 'semantic-ui-react';
+import React from 'react';
 
-import './navbar.scss';
+import NavbarDesktop from './navbar-desktop';
+import NavbarMobile from './navbar-mobile';
 
-const Navbar = ({ pushed, location }) => {
-    const [activeItem, setActiveItem] = useState(location.pathname);
+import '../navbar.scss';
 
-    const handleItemClick = (e, { to }) => setActiveItem(to);
-
+const NavbarWithRoutes = ({ location }) => {
     return (
-        <Segment
-            className={`nav-menu ${pushed ? 'pushed' : ''}`}
-            textAlign="center"
-            basic
-        >
-            <Container>
-                <Menu className="content-box bg-menu" pointing secondary>
-                    <Menu.Item
-                        as={Link}
-                        to="/"
-                        active={activeItem === '/'}
-                        onClick={handleItemClick}
-                    >
-                        Home
-                    </Menu.Item>
-                    <Menu.Item
-                        as={Link}
-                        to="/admin"
-                        active={activeItem === '/admin'}
-                        onClick={handleItemClick}
-                    >
-                        Admin
-                    </Menu.Item>
-                </Menu>
-            </Container>
-        </Segment>
+        <>
+            <NavbarDesktop location={location} />
+            <NavbarMobile location={location} />
+        </>
     );
 };
 
-Navbar.propTypes = {
-    pushed: PropTypes.bool,
-    location: PropTypes.object.isRequired,
-};
-
-export default Navbar;
+export default NavbarWithRoutes;

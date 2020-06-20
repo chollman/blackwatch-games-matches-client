@@ -1,29 +1,19 @@
 import React from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import history from './history';
 
-import Navbar from './views/navbar/components/navbar';
-import Home from './views/home/containers/home';
-import Admin from './views/admin/containers/admin';
+import NavbarWithRoutes from './views/navbar';
 
 import './styles/global.scss';
 
-function App() {
+const App = () => {
     return (
         <Router history={history}>
             <div className="bgm">
-                <Navbar pushed location={history.location} />
-                <Switch>
-                    <Route path="/admin">
-                        <Admin />
-                    </Route>
-                    <Route path="/">
-                        <Home />
-                    </Route>
-                </Switch>
+                <NavbarWithRoutes location={history.location} />
             </div>
         </Router>
     );
-}
+};
 
 export default App;

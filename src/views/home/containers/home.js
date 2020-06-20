@@ -1,20 +1,39 @@
 import React from 'react';
-import { Container, Segment, Header, Icon, Image } from 'semantic-ui-react';
+import { Segment, Header, Icon, Image, Grid } from 'semantic-ui-react';
 import src from './img/test-image.png';
 
 const Home = () => {
     return (
-        <Container>
-            <Segment className="content-box" textAlign="center">
-                <Header icon>
-                    <Icon name="pdf file outline" />
-                    Home
-                    <Segment vertical>
-                        <Image fluid src={src} centered />
+        <Grid container stackable verticalAlign="middle">
+            <Grid.Row>
+                <Grid.Column width={16}>
+                    <Segment className="content-box" textAlign="center">
+                        <Header icon>
+                            <Icon name="pdf file outline" />
+                            Home
+                            <Segment vertical>
+                                <Image fluid src={src} centered />
+                            </Segment>
+                            <Segment vertical>
+                                <Image fluid src={src} centered />
+                            </Segment>
+                            <Segment vertical>
+                                <Image fluid src={src} centered />
+                            </Segment>
+                            <Segment vertical>
+                                <Image fluid src={src} centered />
+                            </Segment>
+                            <Segment vertical>
+                                <Image fluid src={src} centered />
+                            </Segment>
+                            <Segment vertical>
+                                <Image fluid src={src} centered />
+                            </Segment>
+                        </Header>
                     </Segment>
-                </Header>
-            </Segment>
-        </Container>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
     );
 };
 

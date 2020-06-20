@@ -1,0 +1,92 @@
+@import '../../styles/global-variables.scss';
+
+.#{$css-namespace} {
+    .fixed-height {
+        height: 100vh;
+    }
+    .nav-menu {
+        padding: 0;
+
+        .menu.secondary.pointing {
+            .bg-menu {
+                .item {
+                    color: $link-color;
+                    height: $menu-height;
+                    text-transform: uppercase;
+                    min-width: 120px;
+                    justify-content: center;
+                    &:hover,
+                    &:active {
+                        color: $link-color-active;
+                    }
+                    &.active {
+                        color: $link-color-active;
+                        border-color: $link-border-color;
+                        background: rgb(2, 175, 254);
+                        background: radial-gradient(
+                            circle at center bottom,
+                            rgba(2, 175, 254, 0.4) 0%,
+                            rgba(2, 175, 254, 0) 50%
+                        );
+                        &:hover,
+                        &:active {
+                            color: $link-color-active;
+                            border-color: $link-border-color;
+                        }
+                    }
+                }
+            }
+
+            &.fixed {
+                .bg-menu {
+                    .item {
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        &.desktop {
+            margin: 2em 0;
+            .menu.secondary.pointing {
+                .bg-menu {
+                    min-height: $menu-height;
+                    padding: 0 20px;
+                    @include content-box();
+                }
+                &.fixed {
+                    .bg-menu {
+                        min-height: 0;
+                    }
+                }
+            }
+            &.nav-fixed {
+                height: calc(#{$menu-height} + 2px);
+                border: 2px solid transparent;
+                .menu.secondary.pointing {
+                    @include content-box();
+                    .bg-menu {
+                        @include border-radius(0);
+                        @include box-shadow(0, 0, 0, 0, transparent);
+                        border-top: none;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+
+        &.mobile {
+            margin: 0;
+            .menu.secondary.pointing {
+                .bg-menu {
+                    min-height: 0;
+
+                    .item {
+                        height: auto;
+                        min-width: 0;
+                    }
+                }
+            }
+        }
+    }
+}
