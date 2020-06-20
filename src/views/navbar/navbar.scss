@@ -47,7 +47,8 @@
         }
 
         &.desktop {
-            margin: 2em 0;
+            margin: 0 0 2em;
+            padding-top: 2em;
             .menu.secondary.pointing {
                 .bg-menu {
                     min-height: $menu-height;

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import NavbarDesktop from './navbar-desktop';
-import NavbarMobile from './navbar-mobile';
+import NavbarDesktop from './NavbarDesktop';
+import NavbarMobile from './NavbarMobile';
 
 import '../navbar.scss';
 

@@ -10,7 +10,7 @@ import {
 } from 'semantic-ui-react';
 
 import Routes from '../../../routes';
-import SidebarMobile from './sidebar-mobile';
+import SidebarMobile from './SidebarMobile';
 
 const NavbarMobile = ({ location }) => {
     const [sidebarOpened, setSidebarOpened] = useState(false);

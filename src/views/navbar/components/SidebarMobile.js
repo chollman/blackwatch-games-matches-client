@@ -35,6 +35,14 @@ const SidebarMobile = ({
                 </Menu.Item>
                 <Menu.Item
                     as={Link}
+                    to="/usuarios"
+                    active={activeItem === '/usuarios'}
+                    onClick={handleItemClick}
+                >
+                    Usuarios
+                </Menu.Item>
+                <Menu.Item
+                    as={Link}
                     to="/admin"
                     active={activeItem === '/admin'}
                     onClick={handleItemClick}
