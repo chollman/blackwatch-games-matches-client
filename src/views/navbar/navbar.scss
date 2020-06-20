@@ -79,10 +79,10 @@
             margin: 0;
             .menu.secondary.pointing {
                 .bg-menu {
-                    min-height: 0;
+                    min-height: 4em;
 
                     .item {
-                        height: auto;
+                        height: 4em;
                         min-width: 0;
                     }
                 }
