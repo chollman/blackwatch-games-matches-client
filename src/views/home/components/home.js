@@ -1,6 +1,6 @@
 import React from 'react';
 import { Segment, Header, Icon, Image, Grid } from 'semantic-ui-react';
-import src from '../../../styles/img/test-image.png';
+import src from '../../../styles/img/pampi.png';
 
 const Home = () => {
     return (
@@ -11,21 +11,6 @@ const Home = () => {
                         <Header icon>
                             <Icon name="pdf file outline" />
                             Home
-                            <Segment vertical>
-                                <Image fluid src={src} centered />
-                            </Segment>
-                            <Segment vertical>
-                                <Image fluid src={src} centered />
-                            </Segment>
-                            <Segment vertical>
-                                <Image fluid src={src} centered />
-                            </Segment>
-                            <Segment vertical>
-                                <Image fluid src={src} centered />
-                            </Segment>
-                            <Segment vertical>
-                                <Image fluid src={src} centered />
-                            </Segment>
                             <Segment vertical>
                                 <Image fluid src={src} centered />
                             </Segment>
