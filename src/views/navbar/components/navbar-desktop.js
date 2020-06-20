@@ -14,6 +14,7 @@ import Routes from '../../../routes';
 const NavbarDesktop = ({ location }) => {
     const [activeItem, setActiveItem] = useState(location.pathname);
     const [fixed, setFixed] = useState(false);
+
     const handleItemClick = (e, { to }) => setActiveItem(to);
     const hideFixedMenu = () => setFixed(false);
     const showFixedMenu = () => setFixed(true);
@@ -61,7 +62,6 @@ const NavbarDesktop = ({ location }) => {
 };
 
 NavbarDesktop.propTypes = {
-    pushed: PropTypes.bool,
     location: PropTypes.object.isRequired,
 };
 

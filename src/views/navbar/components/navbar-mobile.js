@@ -57,7 +57,6 @@ const NavbarMobile = ({ location }) => {
 };
 
 NavbarMobile.propTypes = {
-    pushed: PropTypes.bool,
     location: PropTypes.object.isRequired,
 };
 

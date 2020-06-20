@@ -1,6 +1,6 @@
 import React from 'react';
 import { Segment, Header, Icon, Image, Grid } from 'semantic-ui-react';
-import src from './img/test-image.png';
+import src from '../../../styles/img/test-image.png';
 
 const Home = () => {
     return (

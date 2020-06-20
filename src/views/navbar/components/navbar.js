@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import NavbarDesktop from './navbar-desktop';
 import NavbarMobile from './navbar-mobile';
@@ -12,6 +13,10 @@ const NavbarWithRoutes = ({ location }) => {
             <NavbarMobile location={location} />
         </>
     );
+};
+
+NavbarWithRoutes.propTypes = {
+    location: PropTypes.object.isRequired,
 };
 
 export default NavbarWithRoutes;
