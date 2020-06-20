@@ -7,6 +7,7 @@ import {
     Segment,
     Responsive,
     Visibility,
+    Icon,
 } from 'semantic-ui-react';
 
 import Routes from '../../../routes';
@@ -41,7 +42,7 @@ const NavbarDesktop = ({ location }) => {
                                 active={activeItem === '/'}
                                 onClick={handleItemClick}
                             >
-                                Home
+                                <Icon name="home" size="large" />
                             </Menu.Item>
                             <Menu.Item
                                 as={Link}

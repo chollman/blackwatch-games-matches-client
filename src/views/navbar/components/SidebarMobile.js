@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Menu, Sidebar } from 'semantic-ui-react';
+import { Icon, Menu, Sidebar } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 const SidebarMobile = ({
@@ -17,39 +17,39 @@ const SidebarMobile = ({
     return (
         <Sidebar
             as={Menu}
-            animation="push"
+            animation="overlay"
             inverted
+            icon="labeled"
             onHide={handleSidebarHide}
             onHidden={handleSidebarFinishedHiding}
             vertical
             visible={sidebarOpened}
+            width="thin"
         >
-            <Sidebar.Pusher dimmed={sidebarOpened}>
-                <Menu.Item
-                    as={Link}
-                    to="/"
-                    active={activeItem === '/'}
-                    onClick={handleItemClick}
-                >
-                    Home
-                </Menu.Item>
-                <Menu.Item
-                    as={Link}
-                    to="/usuarios"
-                    active={activeItem === '/usuarios'}
-                    onClick={handleItemClick}
-                >
-                    Usuarios
-                </Menu.Item>
-                <Menu.Item
-                    as={Link}
-                    to="/admin"
-                    active={activeItem === '/admin'}
-                    onClick={handleItemClick}
-                >
-                    Admin
-                </Menu.Item>
-            </Sidebar.Pusher>
+            <Menu.Item
+                as={Link}
+                to="/"
+                active={activeItem === '/'}
+                onClick={handleItemClick}
+            >
+                <Icon name="home" size="large" />
+            </Menu.Item>
+            <Menu.Item
+                as={Link}
+                to="/usuarios"
+                active={activeItem === '/usuarios'}
+                onClick={handleItemClick}
+            >
+                Usuarios
+            </Menu.Item>
+            <Menu.Item
+                as={Link}
+                to="/admin"
+                active={activeItem === '/admin'}
+                onClick={handleItemClick}
+            >
+                Admin
+            </Menu.Item>
         </Sidebar>
     );
 };
