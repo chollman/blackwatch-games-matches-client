@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, List, Segment } from 'semantic-ui-react';
+import { Grid, List, Segment, Image, Divider } from 'semantic-ui-react';
 
 const renderUsersList = users => {
     return (
@@ -7,7 +7,17 @@ const renderUsersList = users => {
             {users.map(user => {
                 return (
                     <List.Item key={user.id}>
-                        {user.first_name} {user.last_name}
+                        <Segment basic>
+                            <Image
+                                src={user.avatar}
+                                size="mini"
+                                verticalAlign="middle"
+                                circular
+                                spaced="right"
+                            />
+                            {user.first_name} {user.last_name}
+                        </Segment>
+                        <Divider />
                     </List.Item>
                 );
             })}

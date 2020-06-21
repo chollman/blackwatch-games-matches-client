@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import {
     Container,
     Menu,
     Segment,
     Responsive,
     Visibility,
-    Icon,
 } from 'semantic-ui-react';
 
 import Routes from '../../../routes';
+import MenuLinks from './MenuLinks';
 
 const NavbarDesktop = ({ location }) => {
     const [activeItem, setActiveItem] = useState(location.pathname);
@@ -36,30 +35,10 @@ const NavbarDesktop = ({ location }) => {
                 >
                     <Menu fixed={fixed ? 'top' : null} pointing secondary>
                         <Container className="bg-menu">
-                            <Menu.Item
-                                as={Link}
-                                to="/"
-                                active={activeItem === '/'}
-                                onClick={handleItemClick}
-                            >
-                                <Icon name="home" size="large" />
-                            </Menu.Item>
-                            <Menu.Item
-                                as={Link}
-                                to="/usuarios"
-                                active={activeItem === '/usuarios'}
-                                onClick={handleItemClick}
-                            >
-                                Usuarios
-                            </Menu.Item>
-                            <Menu.Item
-                                as={Link}
-                                to="/admin"
-                                active={activeItem === '/admin'}
-                                onClick={handleItemClick}
-                            >
-                                Admin
-                            </Menu.Item>
+                            <MenuLinks
+                                activeItem={activeItem}
+                                handleItemClick={handleItemClick}
+                            />
                             <Menu.Item position="right">Login</Menu.Item>
                         </Container>
                     </Menu>

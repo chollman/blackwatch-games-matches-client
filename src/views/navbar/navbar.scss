@@ -62,15 +62,18 @@
                 }
             }
             &.nav-fixed {
-                height: calc(#{$menu-height} + 2px);
+                height: calc(#{$menu-height} + 2px + 2em);
                 border: 2px solid transparent;
                 .menu.secondary.pointing {
                     @include content-box();
                     .bg-menu {
                         @include border-radius(0);
                         @include box-shadow(0, 0, 0, 0, transparent);
-                        border-top: none;
+                        border-top: none !important;
                         background: transparent;
+                        .item {
+                            height: 3em;
+                        }
                     }
                 }
             }

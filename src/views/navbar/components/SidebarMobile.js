@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Menu, Sidebar } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Menu, Sidebar } from 'semantic-ui-react';
+import MenuLinks from './MenuLinks';
 
 const SidebarMobile = ({
     location,
@@ -26,30 +26,10 @@ const SidebarMobile = ({
             visible={sidebarOpened}
             width="thin"
         >
-            <Menu.Item
-                as={Link}
-                to="/"
-                active={activeItem === '/'}
-                onClick={handleItemClick}
-            >
-                <Icon name="home" size="large" />
-            </Menu.Item>
-            <Menu.Item
-                as={Link}
-                to="/usuarios"
-                active={activeItem === '/usuarios'}
-                onClick={handleItemClick}
-            >
-                Usuarios
-            </Menu.Item>
-            <Menu.Item
-                as={Link}
-                to="/admin"
-                active={activeItem === '/admin'}
-                onClick={handleItemClick}
-            >
-                Admin
-            </Menu.Item>
+            <MenuLinks
+                activeItem={activeItem}
+                handleItemClick={handleItemClick}
+            />
         </Sidebar>
     );
 };
