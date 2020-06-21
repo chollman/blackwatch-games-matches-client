@@ -6,6 +6,7 @@ import {
     Segment,
     Responsive,
     Visibility,
+    Transition,
 } from 'semantic-ui-react';
 
 import Routes from '../../../routes';
@@ -16,8 +17,6 @@ const NavbarDesktop = ({ location }) => {
     const [fixed, setFixed] = useState(false);
 
     const handleItemClick = (e, { to }) => setActiveItem(to);
-    const hideFixedMenu = () => setFixed(false);
-    const showFixedMenu = () => setFixed(true);
 
     const navbarFixed = fixed ? 'nav-fixed' : '';
 
@@ -25,23 +24,46 @@ const NavbarDesktop = ({ location }) => {
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
             <Visibility
                 once={false}
-                onBottomPassed={showFixedMenu}
-                onBottomPassedReverse={hideFixedMenu}
+                onBottomPassed={() => setFixed(true)}
+                onBottomPassedReverse={() => setFixed(false)}
             >
                 <Segment
                     className={`nav-menu desktop ${navbarFixed}`}
                     textAlign="center"
                     basic
                 >
-                    <Menu fixed={fixed ? 'top' : null} pointing secondary>
-                        <Container className="bg-menu">
-                            <MenuLinks
-                                activeItem={activeItem}
-                                handleItemClick={handleItemClick}
-                            />
-                            <Menu.Item position="right">Login</Menu.Item>
-                        </Container>
-                    </Menu>
+                    <Transition
+                        unmountOnHide={true}
+                        visible={!fixed}
+                        animation="slide up"
+                        duration={300}
+                    >
+                        <Menu pointing secondary>
+                            <Container className="bg-menu">
+                                <MenuLinks
+                                    activeItem={activeItem}
+                                    handleItemClick={handleItemClick}
+                                />
+                                <Menu.Item position="right">Login</Menu.Item>
+                            </Container>
+                        </Menu>
+                    </Transition>
+                    <Transition
+                        unmountOnHide={true}
+                        visible={fixed}
+                        animation="slide down"
+                        duration={500}
+                    >
+                        <Menu fixed="top" pointing secondary>
+                            <Container className="bg-menu">
+                                <MenuLinks
+                                    activeItem={activeItem}
+                                    handleItemClick={handleItemClick}
+                                />
+                                <Menu.Item position="right">Login</Menu.Item>
+                            </Container>
+                        </Menu>
+                    </Transition>
                 </Segment>
             </Visibility>
             <Routes />

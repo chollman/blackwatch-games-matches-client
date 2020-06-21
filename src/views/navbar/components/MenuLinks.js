@@ -35,7 +35,6 @@ const MenuLinks = ({ activeItem, handleItemClick }) => {
 };
 
 MenuLinks.propTypes = {
-    activeItem: PropTypes.string,
     handleItemClick: PropTypes.func,
 };
 

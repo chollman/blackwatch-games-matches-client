@@ -49,6 +49,7 @@
         &.desktop {
             margin: 0 0 2em;
             padding-top: 2em;
+            height: calc(#{$menu-height} + 2px + 2em);
             .menu.secondary.pointing {
                 .bg-menu {
                     min-height: $menu-height;
@@ -62,7 +63,6 @@
                 }
             }
             &.nav-fixed {
-                height: calc(#{$menu-height} + 2px + 2em);
                 border: 2px solid transparent;
                 .menu.secondary.pointing {
                     @include content-box();
