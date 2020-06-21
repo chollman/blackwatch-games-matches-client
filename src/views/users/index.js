@@ -1,2 +1,2 @@
-import Users from './components/Users';
+import Users from './containers/Users';
 export default Users;
