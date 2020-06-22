@@ -8,6 +8,7 @@ import {
     Loader,
     Placeholder,
 } from 'semantic-ui-react';
+import InlineError from '../../../ui/error';
 
 const renderUsersList = users => {
     return (
@@ -36,29 +37,54 @@ const renderUsersList = users => {
     );
 };
 
+const renderLoading = () => {
+    return (
+        <Grid container stackable verticalAlign="middle">
+            <Grid.Row>
+                <Grid.Column width={16}>
+                    <Segment
+                        className="content-box placeholder-segment"
+                        textAlign="center"
+                    >
+                        <Loader active inverted />
+                        <Placeholder fluid inverted>
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                        </Placeholder>
+                    </Segment>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
+    );
+};
+
+const renderError = error => {
+    return (
+        <Grid container stackable verticalAlign="middle">
+            <Grid.Row>
+                <Grid.Column width={16}>
+                    <Segment
+                        placeholder
+                        className="content-box placeholder-segment"
+                        textAlign="center"
+                    >
+                        <InlineError error={error} />
+                    </Segment>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
+    );
+};
+
 const Users = ({ users }) => {
     if (users.isLoading) {
-        return (
-            <Grid container stackable verticalAlign="middle">
-                <Grid.Row>
-                    <Grid.Column width={16}>
-                        <Segment
-                            className="content-box placeholder-segment"
-                            textAlign="center"
-                        >
-                            <Loader active inverted />
-                            <Placeholder fluid inverted>
-                                <Placeholder.Line />
-                                <Placeholder.Line />
-                                <Placeholder.Line />
-                                <Placeholder.Line />
-                                <Placeholder.Line />
-                            </Placeholder>
-                        </Segment>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        );
+        return renderLoading();
+    }
+    if (users.error) {
+        return renderError(users.error);
     }
     return (
         <Grid container stackable verticalAlign="middle">

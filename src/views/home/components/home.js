@@ -7,18 +7,12 @@ const Home = () => {
         <Grid container stackable>
             <Grid.Row>
                 <Grid.Column width={8}>
-                    <Segment className="content-box" textAlign="center">
-                        <Segment basic>
-                            <Image fluid src={src} centered />
-                        </Segment>
+                    <Segment basic>
+                        <Image fluid src={src} centered />
                     </Segment>
                 </Grid.Column>
                 <Grid.Column width={8} stretched>
-                    <Segment
-                        className="content-box"
-                        textAlign="center"
-                        placeholder
-                    >
+                    <Segment basic textAlign="center" placeholder>
                         Pampita the Basset
                     </Segment>
                 </Grid.Column>
