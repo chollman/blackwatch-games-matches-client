@@ -7,10 +7,22 @@ body {
 }
 
 .#{$css-namespace} {
+    @import 'spacing';
     .pushable > .pusher {
         padding-bottom: 20px;
     }
     .content-box {
         @include content-box();
+
+        &.placeholder-segment {
+            min-height: 500px;
+            .inverted.placeholder,
+            .inverted.placeholder .image.header:after,
+            .inverted.placeholder .line,
+            .inverted.placeholder .line:after,
+            .inverted.placeholder > :before {
+                background-color: #212b37;
+            }
+        }
     }
 }
