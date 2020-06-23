@@ -8,6 +8,10 @@ body {
 
 .#{$css-namespace} {
     @import 'spacing';
+    .ui.hidden.image,
+    .ui.hidden.images {
+        display: none !important;
+    }
     .pushable > .pusher {
         padding-bottom: 20px;
     }

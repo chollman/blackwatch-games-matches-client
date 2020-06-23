@@ -38,15 +38,15 @@ const NavbarDesktop = ({ location }) => {
                         animation="slide up"
                         duration={300}
                     >
-                        <Menu pointing secondary>
-                            <Container className="bg-menu">
+                        <Container className="bg-menu">
+                            <Menu pointing secondary>
                                 <MenuLinks
                                     activeItem={activeItem}
                                     handleItemClick={handleItemClick}
                                 />
                                 <Menu.Item position="right">Login</Menu.Item>
-                            </Container>
-                        </Menu>
+                            </Menu>
+                        </Container>
                     </Transition>
                     <Transition
                         unmountOnHide={true}
