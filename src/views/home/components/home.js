@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Image, Grid, Icon } from 'semantic-ui-react';
+import { Segment, Image, Grid, Icon, Container } from 'semantic-ui-react';
 import src from '../../../styles/img/pampi.png';
 
 const Home = () => {
@@ -18,22 +18,20 @@ const Home = () => {
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row className="npb">
-                    <Grid.Column width={16}>
-                        <Segment className="content-box" textAlign="center">
-                            Visitenla en
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://www.instagram.com/pampibasset/?hl=es-la"
-                            >
-                                <Icon size="large" name="instagram" />
-                                @pampibasset
-                            </a>
-                        </Segment>
-                    </Grid.Column>
-                </Grid.Row>
             </Grid>
+            <Container>
+                <Segment className="content-box" textAlign="center">
+                    Visitenla en
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.instagram.com/pampibasset/?hl=es-la"
+                    >
+                        <Icon size="large" name="instagram" />
+                        @pampibasset
+                    </a>
+                </Segment>
+            </Container>
         </div>
     );
 };
