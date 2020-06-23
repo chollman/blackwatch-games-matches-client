@@ -42,6 +42,7 @@ const Home = () => {
                 <Segment className="content-box" textAlign="center">
                     Visitenla en
                     <a
+                        style={{ color: '#02affe' }}
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://www.instagram.com/pampibasset/?hl=es-la"
