@@ -39,7 +39,7 @@ const renderUsersList = users => {
 
 const renderLoading = () => {
     return (
-        <Segment basic>
+        <Segment basic vertical>
             <Grid container stackable verticalAlign="middle">
                 <Grid.Row>
                     <Grid.Column width={16}>
@@ -65,7 +65,7 @@ const renderLoading = () => {
 
 const renderError = error => {
     return (
-        <Segment basic>
+        <Segment basic vertical>
             <Grid container stackable verticalAlign="middle">
                 <Grid.Row>
                     <Grid.Column width={16}>
@@ -91,7 +91,7 @@ const Users = ({ users }) => {
         return renderError(users.error);
     }
     return (
-        <Segment basic>
+        <Segment basic vertical>
             <Grid container stackable verticalAlign="middle">
                 <Grid.Row>
                     <Grid.Column width={16}>
