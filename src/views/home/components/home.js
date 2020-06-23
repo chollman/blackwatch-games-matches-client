@@ -1,6 +1,5 @@
 import React from 'react';
 import { Segment, Image, Grid, Icon, Container } from 'semantic-ui-react';
-import src from '../../../styles/img/pampi.png';
 
 const Home = () => {
     return (
@@ -9,7 +8,13 @@ const Home = () => {
                 <Grid.Row>
                     <Grid.Column width={8}>
                         <Segment basic>
-                            <Image fluid src={src} centered />
+                            <Image
+                                fluid
+                                src="https://instagram.faep5-1.fna.fbcdn.net/v/t51.2885-19/s320x320/51379337_264214921155196_3132253399102259200_n.jpg?_nc_ht=instagram.faep5-1.fna.fbcdn.net&_nc_ohc=SWB5JCvd66oAX_dbudz&oh=7b9e353a703394a75bbabe4473d258a6&oe=5F1A29AF"
+                                alt="@pampibasset"
+                                rounded
+                                centered
+                            />
                         </Segment>
                     </Grid.Column>
                     <Grid.Column width={8} stretched>
