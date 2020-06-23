@@ -4,6 +4,7 @@ import history from './history';
 
 import NavbarWithRoutes from './views/navbar';
 
+import 'semantic-ui-css/semantic.min.css';
 import './styles/global.scss';
 
 const App = () => {
