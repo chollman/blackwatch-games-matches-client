@@ -1,9 +1,23 @@
 import React from 'react';
-import { Segment, Image, Grid, Icon, Container } from 'semantic-ui-react';
+import {
+    Segment,
+    Image,
+    Grid,
+    Icon,
+    Container,
+    Header,
+} from 'semantic-ui-react';
 
 const Home = () => {
     return (
         <div>
+            <Container>
+                <Segment className="npb" basic textAlign="center">
+                    <Header>
+                        <h1>Matches Creator</h1>
+                    </Header>
+                </Segment>
+            </Container>
             <Grid container stackable>
                 <Grid.Row>
                     <Grid.Column width={8}>

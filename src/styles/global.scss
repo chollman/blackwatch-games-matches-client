@@ -4,6 +4,10 @@ html,
 body {
     background-color: #16222f;
     color: $text-color;
+
+    .ui.header {
+        color: $text-color;
+    }
 }
 
 .#{$css-namespace} {
