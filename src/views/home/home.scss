@@ -1,0 +1,7 @@
+@import '../../styles/global-variables.scss';
+
+.#{$css-namespace} {
+    .home-main.inverted.segment {
+        border-bottom: 4px solid $text-color;
+    }
+}

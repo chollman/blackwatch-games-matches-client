@@ -9,10 +9,9 @@ import {
     Transition,
 } from 'semantic-ui-react';
 
-import Routes from '../../../routes';
 import MenuLinks from './MenuLinks';
 
-const NavbarDesktop = ({ location }) => {
+const NavbarDesktop = ({ location, color }) => {
     const [activeItem, setActiveItem] = useState(location.pathname);
     const [fixed, setFixed] = useState(false);
 
@@ -21,7 +20,10 @@ const NavbarDesktop = ({ location }) => {
     const navbarFixed = fixed ? 'nav-fixed' : '';
 
     return (
-        <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <Responsive
+            className="bgm-navbar-desktop"
+            minWidth={Responsive.onlyTablet.minWidth}
+        >
             <Visibility
                 once={false}
                 onBottomPassed={() => setFixed(true)}
@@ -31,6 +33,8 @@ const NavbarDesktop = ({ location }) => {
                     className={`nav-menu desktop ${navbarFixed}`}
                     textAlign="center"
                     basic
+                    inverted={!!color}
+                    color={color}
                 >
                     <Transition
                         unmountOnHide={true}
@@ -66,7 +70,6 @@ const NavbarDesktop = ({ location }) => {
                     </Transition>
                 </Segment>
             </Visibility>
-            <Routes />
         </Responsive>
     );
 };

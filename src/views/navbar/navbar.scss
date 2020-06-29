@@ -1,6 +1,10 @@
 @import '../../styles/global-variables.scss';
 
 .#{$css-namespace} {
+    .bgm-navbar-desktop {
+        position: relative;
+        z-index: 1;
+    }
     .fixed-height {
         height: 100vh;
     }
@@ -98,6 +102,14 @@
                                 margin-right: 20px;
                             }
                         }
+                    }
+                }
+            }
+
+            &.inverted.black.segment {
+                .bg-menu {
+                    .menu.secondary.pointing {
+                        background-color: #1b1c1d !important;
                     }
                 }
             }

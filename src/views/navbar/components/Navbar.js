@@ -6,17 +6,18 @@ import NavbarMobile from './NavbarMobile';
 
 import '../navbar.scss';
 
-const NavbarWithRoutes = ({ location }) => {
+const Navbar = ({ location, color }) => {
     return (
         <>
-            <NavbarDesktop location={location} />
+            <NavbarDesktop location={location} color={color} />
             <NavbarMobile location={location} />
         </>
     );
 };
 
-NavbarWithRoutes.propTypes = {
+Navbar.propTypes = {
     location: PropTypes.object.isRequired,
+    color: PropTypes.string,
 };
 
-export default NavbarWithRoutes;
+export default Navbar;

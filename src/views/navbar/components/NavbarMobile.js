@@ -9,7 +9,6 @@ import {
     Sidebar,
 } from 'semantic-ui-react';
 
-import Routes from '../../../routes';
 import SidebarMobile from './SidebarMobile';
 
 const NavbarMobile = ({ location }) => {
@@ -30,6 +29,7 @@ const NavbarMobile = ({ location }) => {
 
     return (
         <Responsive
+            className="bgm-navbar-mobile"
             as={Sidebar.Pushable}
             maxWidth={Responsive.onlyMobile.maxWidth}
         >
@@ -50,7 +50,6 @@ const NavbarMobile = ({ location }) => {
                         </Container>
                     </Menu>
                 </Segment>
-                <Routes />
             </Sidebar.Pusher>
         </Responsive>
     );
